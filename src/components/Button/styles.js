@@ -1,37 +1,37 @@
 import styled, { css } from "styled-components";
 
 export const ButtonContainer = styled.button`
-    background: transparent;
-    border-radius: 22px;
-    position: relative;
-    border: none;
-    margin: 40px 0;
-    
-    font-family: "Open Sans";
-    font-size: 16px;
-    font-weight: 300;
+  background: transparent;
+  position: relative;
+  color: ${({ fontColor }) =>
+    fontColor}; /* Define a cor da fonte com base na prop fontColor, se fornecida, caso contrário, use branco */
+  font-weight: 700;
+  font-size: 14px;
+  padding: 2px 2px;
+  min-width: 120px;
+  width: auto;
+  border: none;
 
-    color: #FFF;
-    padding: 2px 12px;
-    min-width: 80px;
-    width: 100%;
+  ${({ variant }) =>
+    variant !== "primary" &&
+    css`
+      min-width: 167px;
+      height: 33px;
+      border-radius: 22px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 18px;
+      background: #e4105d;
 
-    ${({variant}) =>variant !== "primary" && css`
-        min-width: 167px;
-        height: 33px;
-
-        background: #E4105D;
-
-        &::after {
-            content: '',
-            position: absolute;
-            top: -5px;
-            left: -6px;
-            width: calc(100% + 10px);
-            height: calc(100% + 10px);
-            border-radius: 22px;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #e4105d;
+        top: -5px;
+        left: -6px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        border-radius: 22px;
+      }
     `}
-    
-
-`
+`;

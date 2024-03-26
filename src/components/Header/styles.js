@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled  from 'styled-components';
 
 export const Container = styled.div`
+   
     width: 100%;
     max-width: 80%;
-    height: 67px;
+    height: 47px;
 
     display: flex;
     justify-content: space-between;
@@ -20,13 +21,13 @@ export const Row = styled.div`
 export const Wrapper = styled.div`
     background-color: #151515;
     width: 100%;
-    height: auto;
+    height: 47px;
     display:flex
     justify-content: center;
     align-items: center
 `
 
-export const FindInputContainer = styled.div`
+export const BuscarInputContainer = styled.div`
     width: 275px;
     height: 30px;
     background: #2D2D37;
@@ -40,11 +41,21 @@ export const FindInputContainer = styled.div`
 export const Menu = styled.a`
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
     line-height: 25px;
     color: #FFFFFF;
     margin-right: 12px;
+`
+
+export const MenuRight = styled.a`
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-right: 12px;
+    text-decoration: none;
 `
 
 export const UserPicture = styled.img`
@@ -58,6 +69,5 @@ export const Input = styled.input`
     background: transparent;
     flex: 1;
     border: 0;
-    padding: 12px;
     color: #FFFFFF;
 `
